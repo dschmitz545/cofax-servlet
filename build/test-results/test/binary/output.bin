@@ -1,0 +1,80 @@
+Request method:	GET
+JRequest URI:	https://run.mocky.io/v3/431da3f0-3981-4704-8b9a-1266842dff6c
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+1				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 200 OK
+.Content-Type: application/json; charset=UTF-8
+$Date: Fri, 23 Sep 2022 23:03:36 GMT
+Content-Length: 1922
+$Sozu-Id: 01GDP9F2QZEJPMKYFQZ6WCRM5A
+
+{
+    "web-app": {
+        "servlet": [
+            {
+,                "servlet-name": "cofaxCDS",
+=                "servlet-class": "org.cofax.cds.CDSServlet",
+                 "init-param": {
+0                    "templateOverridePath": "",
+?                    "defaultListTemplate": "listTemplate.htm",
+B                    "defaultFileTemplate": "articleTemplate.htm",
+%                    "useJSP": false,
+0                    "cacheTemplateRefresh": 15,
+-                    "cachePagesRefresh": 10,
+*                    "useDataStore": true,
+.                    "dataStoreName": "cofax",
+c                    "dataStroreUrl": "jdbc:microsoft:sqlserver://LOCALHOST:1433;DatabaseNmae=goon"
+                }
+            },
+            {
+.                "servlet-name": "cofaxEmail",
+?                "servlet-class": "org.cofax.cds.EmailServlet",
+                 "init-param": {
+(                    "mailHost": "mail",
+0                    "mailHostOverride": "mail2"
+                }
+            },
+            {
+.                "servlet-name": "cofaxAdmin",
+>                "servlet-class": "org.cofax.cds.AdminServlet"
+            },
+            {
+.                "servlet-name": "cofaxTools",
+E                "servlet-class": "org.cofax.cds.CofaxToolsServelet",
+                 "init-param": {
+8                    "templatePatch": "toolstemplates/",
+                    "log": 1,
+*                    "dataLogMaxSize": "",
+P                    "removePageCache": "/content/admin/remove?cache=pages&id=",
+X                    "removeTemplateCache": "/content/admin/remove?cache=templates&id=",
+b                    "fileTransferFolder": "/usr/local/tomcat/webapps/content/fileTransferFolder",
+'                    "adminGroupID": 4,
+'                    "betaServer": true
+                }
+            }
+        ],
+        "servlet-mapping": {
+            "cofaxCDS": "/",
+1            "cofaxEmail": "/cofaxutil/aemail/*",
+&            "cofaxAdmin": "/admin/*",
+(            "fileServlet": "/static/*",
+%            "cofaxTools": "/tools/*"
+        },
+        "taglib": {
+'            "taglib-uri": "cofax.tld",
+9            "taglib-location": "/WEB-inf/tlds/cofax.tld"
+
+        }
+    }
+}
+=O valor do atributo taglib-location: /WEB-inf/tlds/cofax.tld
+3O valor do atributo betaServer: [null, null, true]
+QO valor do atributo servlet-name: [cofaxCDS, cofaxEmail, cofaxAdmin, cofaxTools]

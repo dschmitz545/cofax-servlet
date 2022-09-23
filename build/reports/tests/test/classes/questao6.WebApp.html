@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - Class questao6.WebApp</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>Class questao6.WebApp</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/questao6.html">questao6</a> &gt; WebApp</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">1</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">3.644s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">consultarAPI</td>
+<td class="success">3.644s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>Request method:	GET
+Request URI:	https://run.mocky.io/v3/431da3f0-3981-4704-8b9a-1266842dff6c
+Proxy:			&lt;none&gt;
+Request params:	&lt;none&gt;
+Query params:	&lt;none&gt;
+Form params:	&lt;none&gt;
+Path params:	&lt;none&gt;
+Headers:		Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		&lt;none&gt;
+Multiparts:		&lt;none&gt;
+Body:			&lt;none&gt;
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=UTF-8
+Date: Fri, 23 Sep 2022 23:03:36 GMT
+Content-Length: 1922
+Sozu-Id: 01GDP9F2QZEJPMKYFQZ6WCRM5A
+
+{
+    &quot;web-app&quot;: {
+        &quot;servlet&quot;: [
+            {
+                &quot;servlet-name&quot;: &quot;cofaxCDS&quot;,
+                &quot;servlet-class&quot;: &quot;org.cofax.cds.CDSServlet&quot;,
+                &quot;init-param&quot;: {
+                    &quot;templateOverridePath&quot;: &quot;&quot;,
+                    &quot;defaultListTemplate&quot;: &quot;listTemplate.htm&quot;,
+                    &quot;defaultFileTemplate&quot;: &quot;articleTemplate.htm&quot;,
+                    &quot;useJSP&quot;: false,
+                    &quot;cacheTemplateRefresh&quot;: 15,
+                    &quot;cachePagesRefresh&quot;: 10,
+                    &quot;useDataStore&quot;: true,
+                    &quot;dataStoreName&quot;: &quot;cofax&quot;,
+                    &quot;dataStroreUrl&quot;: &quot;jdbc:microsoft:sqlserver://LOCALHOST:1433;DatabaseNmae=goon&quot;
+                }
+            },
+            {
+                &quot;servlet-name&quot;: &quot;cofaxEmail&quot;,
+                &quot;servlet-class&quot;: &quot;org.cofax.cds.EmailServlet&quot;,
+                &quot;init-param&quot;: {
+                    &quot;mailHost&quot;: &quot;mail&quot;,
+                    &quot;mailHostOverride&quot;: &quot;mail2&quot;
+                }
+            },
+            {
+                &quot;servlet-name&quot;: &quot;cofaxAdmin&quot;,
+                &quot;servlet-class&quot;: &quot;org.cofax.cds.AdminServlet&quot;
+            },
+            {
+                &quot;servlet-name&quot;: &quot;cofaxTools&quot;,
+                &quot;servlet-class&quot;: &quot;org.cofax.cds.CofaxToolsServelet&quot;,
+                &quot;init-param&quot;: {
+                    &quot;templatePatch&quot;: &quot;toolstemplates/&quot;,
+                    &quot;log&quot;: 1,
+                    &quot;dataLogMaxSize&quot;: &quot;&quot;,
+                    &quot;removePageCache&quot;: &quot;/content/admin/remove?cache=pages&amp;id=&quot;,
+                    &quot;removeTemplateCache&quot;: &quot;/content/admin/remove?cache=templates&amp;id=&quot;,
+                    &quot;fileTransferFolder&quot;: &quot;/usr/local/tomcat/webapps/content/fileTransferFolder&quot;,
+                    &quot;adminGroupID&quot;: 4,
+                    &quot;betaServer&quot;: true
+                }
+            }
+        ],
+        &quot;servlet-mapping&quot;: {
+            &quot;cofaxCDS&quot;: &quot;/&quot;,
+            &quot;cofaxEmail&quot;: &quot;/cofaxutil/aemail/*&quot;,
+            &quot;cofaxAdmin&quot;: &quot;/admin/*&quot;,
+            &quot;fileServlet&quot;: &quot;/static/*&quot;,
+            &quot;cofaxTools&quot;: &quot;/tools/*&quot;
+        },
+        &quot;taglib&quot;: {
+            &quot;taglib-uri&quot;: &quot;cofax.tld&quot;,
+            &quot;taglib-location&quot;: &quot;/WEB-inf/tlds/cofax.tld&quot;
+        }
+    }
+}
+O valor do atributo taglib-location: /WEB-inf/tlds/cofax.tld
+O valor do atributo betaServer: [null, null, true]
+O valor do atributo servlet-name: [cofaxCDS, cofaxEmail, cofaxAdmin, cofaxTools]
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 7.4</a> at Sep 23, 2022, 8:03:36 PM</p>
+</div>
+</div>
+</body>
+</html>
